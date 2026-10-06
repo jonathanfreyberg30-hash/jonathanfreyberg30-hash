@@ -1,0 +1,49 @@
+#cover {
+   
+
+
+    background-image: url(back2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+h1 {
+    color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    
+}
+#center-content {
+    
+     min-height: 100vh;      
+    margin: 0;              
+
+    /*makes flexy*/
+    display: flex;
+    justify-content: center; /*centers the text*/
+    align-items: center;
+
+}
+.corner-name {
+    position: fixed; /*sets the position for the random text*/
+    bottom: 100px;  
+    right: 200px;   
+    
+    
+    
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+#infoback {
+    background-color: beige;
+    background-image: url(About\ me.png);
+    background-size: 100% 100%;
+    max-width: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
