@@ -25,6 +25,14 @@ h1 {
     align-items: center;
 
 }
+
+#center-content .btn {
+    font-size: clamp(1rem, 1.5vw, 1.8rem);
+    padding: clamp(10px, 1.5vw, 20px)
+             clamp(20px, 3vw, 50px);
+}
+
+
 .corner-name {
     position: fixed; /*sets the position for the random text*/
     bottom: 100px;  
