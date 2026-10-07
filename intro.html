@@ -1,43 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="mystyle.css">
-        <title>Jonathan's Portfolio Page</title>
-        <!-- Well hi there, thanks for snooping -->
-    </head>
-    <body id = "infoback">
-        <div id = "board">
-            <a href = "#about" class = "polaroid polaroid-1">
-                <div class="photo-frame">
-                    <img src="aboutme.JPG" alt="About Me">
-                </div>
-                <div class="caption">About me!</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Explore | Jonathan's Portfolio</title>
+</head>
+<body id="infoback">
+    <main>
+        <nav id="board" aria-label="Portfolio navigation">
+            <a href="#about" class="polaroid polaroid-1">
+                <div class="photo-frame"><img src="aboutme.JPG" alt="Personal portrait"></div>
+                <div class="caption">About Me!</div>
             </a>
-
-
             <a href="#projects" class="polaroid polaroid-2">
-                <div class="photo-frame">
-                    <img src="myprojects.png" alt="Projects">
-                </div>
+                <div class="photo-frame"><img src="myprojects.png" alt="Projects preview"></div>
                 <div class="caption">My Projects!</div>
             </a>
-
-            <a href="https://www.facebook.com/jonathan.freyberg.834865" target="_blank" class="polaroid polaroid-3">
-                <div class="photo-frame">
-                    <img src="mymeta.JPG" alt="Facebook">
-                </div>
-            <div class="caption">My Facebook!</div>
-        </a>
-
-        </div>
-
-
-
-        
-
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </body>
+            <a href="#music" class="polaroid polaroid-3">
+                <div class="photo-frame"><img src = "music.png" alt = "Music Photo"> </div>
+                <div class="caption">My Music!</div>
+            </a>
+            <a href="#experience" class="polaroid polaroid-4">
+                <div class="photo-frame"><img src = "myxp.JPG" alt="Experience Photo"></div></div>
+                <div class="caption">My Experience!</div>
+            </a>
+            <a href="https://www.facebook.com/jonathan.freyberg.834865" target="_blank" rel="noopener noreferrer" class="polaroid polaroid-5">
+                <div class="photo-frame"><img src="mymeta.JPG" alt="Connect with me"></div>
+                <div class="caption">Get in Touch!</div>
+            </a>
+        </nav>
+    </main>
+</body>
 </html>

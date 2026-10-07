@@ -19,20 +19,12 @@ h1 {
      min-height: 100vh;      
     margin: 0;              
 
-    /*makes flexy*/
+    /*makes flexy lol*/
     display: flex;
     justify-content: center; /*centers the text*/
     align-items: center;
 
 }
-
-#center-content .btn {
-    font-size: clamp(1rem, 1.5vw, 1.8rem);
-    padding: clamp(10px, 1.5vw, 20px)
-             clamp(20px, 3vw, 50px);
-}
-
-
 .corner-name {
     position: fixed; /*sets the position for the random text*/
     bottom: 100px;  
@@ -58,109 +50,131 @@ h1 {
     font-family: 'Permanent Marker', 'Comic Sans MS', cursive, sans-serif;
 }
 
+
+/*scrapbook navigation*/
+#board {
+    position: relative;
+    height: 100dvh;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+@media (min-width: 1101px) {
+    #infoback {
+        height: 100dvh;
+        overflow: hidden;
+    }
+}
 .polaroid {
-    position: absolute; /* Allows placing them at specific coordinates */
-    background-color: #ffffff;
-    padding: 12px 12px 24px 12px; /* Extra bottom padding creates the classic photo frame look */
+    position: absolute;
+    display: block;
+    width: clamp(200px, 18vw, 350px);
+    padding: 12px 12px 24px;
+    background: #fff;
     border-radius: 4px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,.3);
     text-decoration: none;
     color: #1e293b;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.1s ease;
+    transition: transform .3s ease, box-shadow .3s ease;
     cursor: pointer;
-    width: clamp(220px, 22vw, 450px);
-    min-width: 0;
-    max-width: none;
-    text-decoration: none;
-    color: #1e293b;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.1s ease;
 }
 
-.photo-frame img {
+.photo-frame img,
+.photo-art {
+    display: block;
     width: 100%;
-    height: auto;
     aspect-ratio: 4 / 3;
-    object-fit: cover; /* Crops image cleanly inside photo frame */
+    object-fit: cover;
     border-radius: 2px;
-
-    
 }
+
+.photo-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 6vw, 6rem);
+    color: rgba(255,255,255,.85);
+    background: linear-gradient(135deg, #8c8178, #c6b19d);
+}
+.photo-art--music { background: linear-gradient(135deg, #6c7480, #b5a7aa); }
+.photo-art--experience { background: linear-gradient(135deg, #7e8d80, #c5baa0); }
+
 .caption {
+    margin-top: 12px;
     text-align: center;
-    font-weight: 600;
-    margin-top: 0.8vw;
-    /* clamp(min, preferred, max) keeps text legible at every scale */
-    font-size: clamp(0.85rem, 1.2vw, 1.3rem); 
+    font-size: clamp(.9rem, 1.15vw, 1.3rem);
     font-weight: 600;
 }
 
-.polaroid:hover {
-    transform: scale(1.1) rotate(0deg) !important; /* Resets rotation and zooms slightly */
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
-    z-index: 100; /* Brings hovered polaroid in front of all others */
+.polaroid:hover,
+.polaroid:focus-visible {
+    transform: scale(1.06) rotate(0deg) !important;
+    box-shadow: 0 20px 35px rgba(0,0,0,.4);
+    z-index: 20;
 }
 
-.polaroid-1 {
-    top: 15%;
-    left: 12%;
-    transform: rotate(-7deg);
-    z-index: 1;
+.polaroid-1 { top: 6%; left: 6%; transform: rotate(-7deg); z-index: 1; }
+.polaroid-2 { top: 7%; right: 7%; transform: rotate(6deg); z-index: 2; }
+.polaroid-3 { top: 29%; left: 40%; transform: rotate(-4deg); z-index: 3; }
+.polaroid-4 { top: 59%; left: 10%; transform: rotate(5deg); z-index: 4; }
+.polaroid-5 { top: 60%; right: 9%; transform: rotate(-6deg); z-index: 5; }
+
+/* Optional destinations for the scrapbook links */
+.portfolio-sections {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px 24px 90px;
 }
-
-.polaroid-2 {
-    top: 25%;
-    right: 15%;
-    transform: rotate(6deg);
-    z-index: 2;
+.portfolio-section {
+    margin: 0 0 20px;
+    padding: 25px;
+    background: rgba(255,255,255,.87);
+    border-radius: 8px;
+    scroll-margin-top: 24px;
 }
+.portfolio-section h2 { margin: 0 0 10px; font-size: 1.5rem; }
+.portfolio-section p { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; }
+.portfolio-section a { color: #364f57; }
 
-.polaroid-3 {
-    bottom: 18%;
-    left: 32%;
-    transform: rotate(-4deg);
-    z-index: 3;
-}
-
-@media (max-width: 768px) {
-
+/* Switch before the desktop photos get crowded */
+@media (max-width: 1100px) {
     #board {
-        min-height: 100vh;
+        min-height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 10px;
-        padding: 40px 20px;
+        gap: 14px;
+        padding: 45px 20px;
+        overflow-y: auto;
     }
-
     .polaroid {
         position: relative;
         top: auto;
+        right: auto;
         bottom: auto;
         left: auto;
-        right: auto;
-
-        width: clamp(180px, 65vw, 260px);
-        min-width: 0;
-        max-width: none;
+        width: clamp(240px, 80vw, 350px);
+        max-width: 100%;
     }
-
-    .photo-frame img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
+    .polaroid-1 { transform: rotate(-5deg); }
+    .polaroid-2 { transform: rotate(4deg); }
+    .polaroid-3 { transform: rotate(-3deg); }
+    .polaroid-4 { transform: rotate(5deg); }
+    .polaroid-5 { transform: rotate(-4deg); }
+    .photo-art { font-size: 4.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .polaroid { transition: none; }
+}
+/* Small desktop screens */
+@media (min-width: 1101px) and (max-width: 1500px) {
+    .polaroid {
+        width: clamp(230px, 22vw, 310px);
     }
+}
 
-    .polaroid-1 {
-        transform: rotate(-5deg);
-    }
-
-    .polaroid-2 {
-        transform: rotate(4deg);
-    }
-
-    .polaroid-3 {
-        transform: rotate(-3deg);
-    }
+#center-content .btn {
+    font-size: clamp(1.3rem, 2vw, 2.2rem);
+    padding: clamp(15px, 2vw, 25px)
+             clamp(30px, 4vw, 60px);
 }
