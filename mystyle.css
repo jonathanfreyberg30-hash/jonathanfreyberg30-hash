@@ -52,7 +52,6 @@ h1 {
 
 .polaroid {
     position: absolute; /* Allows placing them at specific coordinates */
-    width: 18vw;
     background-color: #ffffff;
     padding: 12px 12px 24px 12px; /* Extra bottom padding creates the classic photo frame look */
     border-radius: 4px;
@@ -61,7 +60,7 @@ h1 {
     color: #1e293b;
     transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.1s ease;
     cursor: pointer;
-     width: clamp(220px, 22vw, 450px);
+    width: clamp(220px, 22vw, 450px);
     min-width: 0;
     max-width: none;
     text-decoration: none;
