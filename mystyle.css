@@ -78,6 +78,8 @@ h1 {
     aspect-ratio: 4 / 3;
     object-fit: cover; /* Crops image cleanly inside photo frame */
     border-radius: 2px;
+
+    
 }
 .caption {
     text-align: center;
@@ -114,49 +116,7 @@ h1 {
     transform: rotate(-4deg);
     z-index: 3;
 }
-/* When screen width is 768px or smaller (mobile phones & portrait tablets) */
-@media (max-width: 768px) {
-    
-    /* 1. Switch the page to a scrollable container */
-    body {
-        position: static;
-        overflow-y: auto; /* Allows smooth scrolling down the page */
-        padding: 40px 20px;
-    }
 
-    /* 2. Convert scattered board into a centered flex column */
-    .scattered-board {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px; /* Generous vertical gap between each polaroid */
-        width: 100%;
-    }
 
-    /* 3. Scale up the Polaroids for phone screens */
-    .polaroid {
-        position: relative !important; /* Disables absolute scattering */
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        
-        /* Take up 85% of the mobile screen width */
-        width: 85% !important;
-        max-width: 320px; /* Comfortably large tapping area */
-        
-        /* Slightly reduce tilt so it looks intentional on phones without overflowing edges */
-        padding: 16px 16px 28px 16px;
-    }
 
-    /* 4. Keep subtle alternating tilts for the hand-dropped look */
-    .polaroid-1 { transform: rotate(-2deg) !important; }
-    .polaroid-2 { transform: rotate(2deg) !important; }
-    .polaroid-3 { transform: rotate(-1.5deg) !important; }
 
-    /* 5. Bump up font size for mobile touch screens */
-    .caption {
-        font-size: 1.25rem !important;
-        margin-top: 12px;
-    }
-}
