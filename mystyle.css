@@ -104,6 +104,7 @@ h1 {
     text-align: center;
     font-size: clamp(.9rem, 1.15vw, 1.3rem);
     font-weight: 600;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .polaroid:hover,
